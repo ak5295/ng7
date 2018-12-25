@@ -1,0 +1,28 @@
+body, html {
+  height: 100%;
+  margin: 0 auto;
+}
+
+body {
+  font-family: 'Montserrat';
+  font-size: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 30% auto;
+
+
+}
+
+section {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2em;
+}
