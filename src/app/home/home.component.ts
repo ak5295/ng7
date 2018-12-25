@@ -9,16 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  h1Style = false;
+  // h1Style = false;
+
+  users: Object;
+  // users: any[];
 
   constructor(private data: DataService) { }
 
   ngOnInit() {
+    this.data.getUsers().subscribe( data =>
+      this.users = data);
+      console.log(this.users);
   }
 
-  firstClick() {
-    // this.h1Style = true;
-    this.data.firstClick();
-  }
+  // firstClick() {
+  //   // this.h1Style = true;
+  //   // this.data.firstClick();
+  // }
 
 }

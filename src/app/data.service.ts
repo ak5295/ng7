@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 // import { ConsoleReporter } from 'jasmine';
 
@@ -6,9 +7,13 @@ import { Injectable } from '@angular/core';
 })
 export class DataService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  firstClick() {
-    return console.log(`clicked`);
+  // firstClick() {
+  //   return console.log(`clicked`);
+  // }
+
+  getUsers() {
+    return this.http.get('https://reqres.in/api/users');
   }
 }
