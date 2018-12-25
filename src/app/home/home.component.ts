@@ -1,4 +1,6 @@
+import { DataService } from './../data.service';
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-home',
@@ -9,13 +11,14 @@ export class HomeComponent implements OnInit {
 
   h1Style = false;
 
-  constructor() { }
+  constructor(private data: DataService) { }
 
   ngOnInit() {
   }
 
   firstClick() {
-    this.h1Style = true;
+    // this.h1Style = true;
+    this.data.firstClick();
   }
 
 }
